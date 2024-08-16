@@ -9,19 +9,30 @@
       #banner {
         height: 360px;
         width: 100%;
-        object-fit: cover
+        object-fit: cover;
+        margin-bottom: 16px;
+        
       }
     </style>
    
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id = 'banner' src="https://210b50c1-aa1c-4d02-988c-7f1b78887002-00-23ks6my1wybie.pike.replit.dev/static/people.jpeg">
+
     <div class="container">
       <h1 class="text-center mt-2 mb-4"">DreamForge Careers</h1>
-      <img class="img-fluid" id = 'banner' src="https://210b50c1-aa1c-4d02-988c-7f1b78887002-00-23ks6my1wybie.pike.replit.dev/static/banner.jpg">
-      <h2 class="text-center mt-2 mb-4"">About DreamForge</h2>
-      <p class="lead"> This  Website is a dynamic platform designed to connect job seekers with meaningful opportunities. Beyond listing open positions, it offers insights into the company’s culture, values, and work environment. The site is user-friendly, with intuitive navigation and features that simplify the job search and application process.
+      <div class="row" style="margin-bottom:16px;">
+        <div class="col-md-6">
+      <p> This  Website is a dynamic platform designed to connect job seekers with meaningful opportunities. Beyond listing open positions, it offers insights into the company’s culture, values, and work environment. The site is user-friendly, with intuitive navigation and features that simplify the job search and application process.
 
-        Through this platform, the organization aims to attract top talent and build lasting relationships by showcasing a workplace where innovation and growth are key. Whether you’re starting your career or looking for a new challenge, the Career Website is your gateway to discovering the right opportunity.</p>
+        Through this platform, the organization aims to attract top talent and build lasting relationships by showcasing a workplace where innovation and growth are key. Whether you’re starting your career or looking for a new challenge, the Career Website is your gateway to discovering the right opportunity.
+      </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img  src="https://210b50c1-aa1c-4d02-988c-7f1b78887002-00-23ks6my1wybie.pike.replit.dev/static/banner.jpeg" style="height:320px;border-radius:10px;">
+        </div>
+      </div>
       <h2 class="text-center mt-2 mb-4"">Job Openings</h2>
       <div>
         {% for job in jobs %}
@@ -30,8 +41,8 @@
       </div>
       <div class="text-center">
         <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 2024, Jovian</p>
       </div>
       </div>
+    {% include 'footer.html' %}
   </body>
 </html>
